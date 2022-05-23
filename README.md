@@ -1,10 +1,10 @@
 # ParsiAnalyzer
-ParsiAnalyzer is an analysis plugin for Elasticsearch. Analysis is a process that consists of the following steps:
+ParsiAnalyzer is an analysis plugin for OpenSearch. Analysis is a process that consists of the following steps:
 
 - Tokenizing a block of text into individual terms
 - Normalizing these terms into a standard form
 
-An analyzer is really just a wrapper that combines Character filters, Tokenizer, and Token filters. Elasticsearch provides many Built-in Analyzers but there's still room for improvement especially for Persian language. This plugin provides tools for tokenizing, normalizing and stemming Persian text.
+An analyzer is really just a wrapper that combines Character filters, Tokenizer, and Token filters. OpenSearch provides many Built-in Analyzers but there's still room for improvement especially for Persian language. This plugin provides tools for tokenizing, normalizing and stemming Persian text.
 
 ## Key features
 - Tokenize Persian text
@@ -25,16 +25,16 @@ An analyzer is really just a wrapper that combines Character filters, Tokenizer,
   - Remove common Persian suffixes. for example, `ها` or `ان`.
   
 ## Installation
-To install the plugin for Elasticsearch 7.13.1, run this command:
+To install the plugin for OpenSearch 7.13.1, run this command:
 
 ```bin\elasticsearch-plugin install https://www.dropbox.com/s/cr61dmnx95taivi/ParsiAnalyzer-7.13.1.zip?dl=1```
 
 ## Build
-If you want to build ParsiAnalyzer for any specific version of Elasticsearch, follow these steps:
+If you want to build ParsiAnalyzer for any specific version of OpenSearch, follow these steps:
 1. Make sure you've installed JDK and Maven on your computer
 1. Clone project
 1. Open ```pom.xml```
-1. Under dependencies tag, change Elasticsearch version to your desired version
+1. Under dependencies tag, change OpenSearch version to your desired version
 1. Open ```plugin-descriptor.properties```
 1. Change elasticsearch.version to your desired version
 1. Run this maven command: ```mvn clean package```
@@ -42,7 +42,7 @@ If you want to build ParsiAnalyzer for any specific version of Elasticsearch, fo
 ```bin/elasticsearch-plugin install file:///path/to/ParsiAnalyzer.zip```
 
 ## Usage
-To see how this plugin works, you can use Elasticsearch's `analyze` API:
+To see how this plugin works, you can use OpenSearch's `analyze` API:
 ```
 POST _analyze
 {
