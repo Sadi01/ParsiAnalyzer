@@ -56,8 +56,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
+            <groupId>org.opensearch</groupId>
+            <artifactId>opensearch</artifactId>
             <version>7.13.1</version>
             <scope>provided</scope>
         </dependency>
